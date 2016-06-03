@@ -10,6 +10,8 @@
 		11A104921D0114A1003E4FFF /* cstr.h in Headers */ = {isa = PBXBuildFile; fileRef = 11A104911D0114A1003E4FFF /* cstr.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		11A104991D0114A1003E4FFF /* cstr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11A1048E1D0114A1003E4FFF /* cstr.framework */; };
 		11A1049E1D0114A1003E4FFF /* cstrTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A1049D1D0114A1003E4FFF /* cstrTests.swift */; };
+		11A104A91D0114BF003E4FFF /* cstr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A104A81D0114BF003E4FFF /* cstr.swift */; };
+		11A104AA1D0114BF003E4FFF /* cstr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A104A81D0114BF003E4FFF /* cstr.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +31,7 @@
 		11A104981D0114A1003E4FFF /* cstrTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = cstrTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		11A1049D1D0114A1003E4FFF /* cstrTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cstrTests.swift; sourceTree = "<group>"; };
 		11A1049F1D0114A1003E4FFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		11A104A81D0114BF003E4FFF /* cstr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cstr.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +76,7 @@
 			children = (
 				11A104911D0114A1003E4FFF /* cstr.h */,
 				11A104931D0114A1003E4FFF /* Info.plist */,
+				11A104A81D0114BF003E4FFF /* cstr.swift */,
 			);
 			path = cstr;
 			sourceTree = "<group>";
@@ -194,6 +198,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11A104A91D0114BF003E4FFF /* cstr.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,6 +207,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				11A1049E1D0114A1003E4FFF /* cstrTests.swift in Sources */,
+				11A104AA1D0114BF003E4FFF /* cstr.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,6 +316,7 @@
 		11A104A31D0114A1003E4FFF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -320,12 +327,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ly.cstr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		11A104A41D0114A1003E4FFF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
